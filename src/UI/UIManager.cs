@@ -68,7 +68,18 @@ namespace UnityExplorer.UI
 
         internal static void InitUI()
         {
-            UiBase = UniversalUI.RegisterUI<ExplorerUIBase>(ExplorerCore.GUID, Update);
+            // Prefer VR world-space UI when a VR device is present so users get controller + gaze support.
+            bool useVR = false;
+            try
+            {
+                useVR = UnityEngine.XR.XRDevice.isPresent;
+            }
+            catch { }
+
+            if (useVR)
+                UiBase = UniverseLib.UI.UniversalUI.RegisterUI<UnityExplorer.UI.ExplorerVRUIBase>(ExplorerCore.GUID, Update);
+            else
+                UiBase = UniversalUI.RegisterUI<ExplorerUIBase>(ExplorerCore.GUID, Update);
 
             UIRootRect = UIRoot.GetComponent<RectTransform>();
             UICanvas = UIRoot.GetComponent<Canvas>();
