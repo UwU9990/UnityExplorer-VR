@@ -13,6 +13,11 @@ namespace UnityExplorer.Config
 
         // Actual UE Settings
         public static ConfigElement<KeyCode> Master_Toggle;
+        // VR UI settings
+        public enum VRAnchorPoint { LeftWrist, RightWrist, Head, Tracker, Floating }
+        public static ConfigElement<VRAnchorPoint> VR_Default_Anchor;
+        public static ConfigElement<string> VR_Tracker_Name;
+        public static ConfigElement<bool> VR_Anchored;
         public static ConfigElement<bool> Hide_On_Startup;
         public static ConfigElement<float> Startup_Delay_Time;
         public static ConfigElement<bool> Disable_EventSystem_Override;
@@ -172,6 +177,18 @@ namespace UnityExplorer.Config
             LOCK_TIME_SCALE_TO_DOUBLE = new("Speed-Up Keybind",
                 "Shortcut key for setting TimeScale to double",
                 KeyCode.None);
+            // VR UI Settings
+            VR_Default_Anchor = new("VR UI Default Anchor",
+                "The default attachment point for VR UI canvases (LeftWrist, RightWrist, Head, Tracker, Floating)",
+                VRAnchorPoint.LeftWrist);
+
+            VR_Tracker_Name = new("VR UI Tracker Name",
+                "If using the Tracker option, the name of the tracker GameObject to attach to.",
+                "");
+
+            VR_Anchored = new("VR UI Anchored",
+                "If true, VR UI canvases are anchored to worldspace (locked). If false, they float and follow you.",
+                true);
         }
     }
 }
