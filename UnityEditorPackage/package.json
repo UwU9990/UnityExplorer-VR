@@ -1,19 +1,19 @@
 {
   "name": "com.sinai-dev.unityexplorer",
   "version": "4.12.7",
-  "displayName": "UnityExplorer",
+  "displayName": "UnityExplorer VR",
   "description": "An in-game UI for exploring, debugging and modifying Unity games.",
   "unity": "2017.1",
-  "documentationUrl": "https://github.com/yukieiji/UnityExplorer",
-  "changelogUrl": "https://github.com/yukieiji/UnityExplorer/releases",
-  "licensesUrl": "https://github.com/yukieiji/UnityExplorer/blob/master/LICENSE",
+  "documentationUrl": "https://github.com/UwU9990/UnityExplorer-VR",
+  "changelogUrl": "https://github.com/UwU9990/UnityExplorer-VR/releases",
+  "licensesUrl": "https://github.com/UwU9990/UnityExplorer-VR/blob/master/LICENSE",
   "keywords": [
     "inspector",
     "debug",
     "runtime"
   ],
   "author": {
-    "name": "yukieiji",
-    "url": "https://github.com/yukieiji"
+    "name": "UwU9990",
+    "url": "https://github.com/UwU9990"
   }
 }

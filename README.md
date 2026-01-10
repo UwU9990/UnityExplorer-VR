@@ -9,7 +9,7 @@
   ✔️ Supports most Unity versions from 5.2 to 2021+ (IL2CPP and Mono).
 </p>
 <p align="center">
-  ✨ Powered by <a href="https://github.com/yukieiji/UniverseLib">UniverseLib</a><br>
+  ✨ Powered by <a href="https://github.com/UwU9990/UniverseLib">UniverseLib</a><br>
   🛠️ This is a fork of <a href="https://github.com/yukieiji/UnityExplorer">UnityExplorer VR</a> maintained by Azbith.<br>
 </p>
 

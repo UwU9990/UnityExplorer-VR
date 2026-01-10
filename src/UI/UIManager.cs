@@ -70,11 +70,14 @@ namespace UnityExplorer.UI
         {
             // Prefer VR world-space UI when a VR device is present so users get controller + gaze support.
             bool useVR = false;
+            // On Mono builds the XR assembly isn't referenced; guard with MONO define.
+#if !MONO
             try
             {
                 useVR = UnityEngine.XR.XRDevice.isPresent;
             }
             catch { }
+#endif
 
             if (useVR)
                 UiBase = UniverseLib.UI.UniversalUI.RegisterUI<UnityExplorer.UI.ExplorerVRUIBase>(ExplorerCore.GUID, Update);
